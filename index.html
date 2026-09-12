@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayush — applied machine learning</title>
+<meta name="description" content="Applied ML and NLP engineer. MS in Artificial Intelligence at Northeastern University. Clinical NER, multi-agent systems, and production data pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="rail" aria-label="Sections">
+  <p class="rail-name">Ayush</p>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<section id="about" class="section">
+  <h1 class="lede">
+    <span class="reveal">I build machine learning</span>
+    <span class="reveal">systems, then go looking</span>
+    <span class="reveal">for where they break.</span>
+  </h1>
+
+  <div class="prose reveal">
+    <p>I am finishing an MS in Artificial Intelligence at Northeastern University, graduating in August 2026. Before that I worked on applied ML at Johnson &amp; Johnson, Honeywell, Bosch, and Samsung R&amp;D.</p>
+    <p>Most of my work sits in the unglamorous middle of the stack: clinical entity extraction that has to survive real physician notes, agent pipelines that need to fail predictably, and the data engineering underneath both. I care a great deal about knowing what a benchmark number actually measured, which is why every project below says where its result stops holding.</p>
+    <p>Based in Boston. Currently looking for applied ML, NLP, and data science roles starting mid 2026.</p>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <h2 class="heading">Work</h2>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>FlowMind</h3>
+      <p class="meta">Multi-agent flowchart understanding</p>
+    </header>
+    <div class="prose">
+      <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
+      <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
+      <p class="limit">That 98.7% is measured against ground-truth Mermaid source, not images. End to end from a raw image, accuracy is bounded by the vision reader's 0.860 edge F1. A self-check step on the examiner was a null result at −2.2, which I kept in the writeup as a boundary condition rather than dropping it.</p>
+      <p class="credit">Built with Purvaja Narayana and Shrijan Shetty. I owned measurement, the LLM stack, vision experiments, and results documentation.</p>
+    </div>
+    <p class="links"><a href="#">Repository</a> <a href="#">Writeup</a></p>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>MarketSensAI</h3>
+      <p class="meta">Multi-agent financial analysis, MS capstone</p>
+    </header>
+    <div class="prose">
+      <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
+      <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
+      <p class="limit">The judge reads the serialized milestones, not the source articles, so it scores internal consistency rather than factual grounding. The generator is Qwen2.5-3B-Instruct, small enough that reasoning quality is the binding constraint on output, not retrieval.</p>
+    </div>
+    <p class="links"><a href="#">Repository</a></p>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Research Buddy</h3>
+      <p class="meta">Graph-based literature assistant</p>
+    </header>
+    <div class="prose">
+      <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
+      <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
+      <p class="limit">Community summaries live in memory and are lost between runs. The corpus is titles and abstracts only, so the system reasons about what papers claim, not about what their methods sections say.</p>
+    </div>
+    <p class="links"><a href="#">Repository</a></p>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Physics-informed neural networks</h3>
+      <p class="meta">Undergraduate research, with IIT Kanpur</p>
+    </header>
+    <div class="prose">
+      <p>Work on PINNs for solving differential equations, focused on making training tractable on GPU rather than on new architectures.</p>
+      <p class="result">Reached a 28.2x speedup over the baseline implementation.</p>
+      <p class="limit">The speedup is an implementation and hardware result. It does not change solution accuracy or the class of equations the method handles.</p>
+      <p class="credit">Part of a body of undergraduate research that produced five IEEE publications.</p>
+    </div>
+  </article>
+</section>
+
+<section id="experience" class="section">
+  <h2 class="heading">Experience</h2>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Johnson &amp; Johnson</h3>
+      <p class="meta">Clinical NLP</p>
+    </header>
+    <div class="prose">
+      <p>Clinical named entity recognition on GatorTron with LoRA fine-tuning, reaching F1 above 0.9. Built the surrounding agentic workflow by hand rather than on a framework, and used LLM-as-a-judge for validation.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Honeywell</h3>
+      <p class="meta">Simulation and optimization</p>
+    </header>
+    <div class="prose">
+      <p>Built a full stack around an existing simulator: ETL out of Databricks, predictive models on top, and a genetic algorithm framework driving a closed evaluation loop. The work led to a filed US patent and won an internal hackathon.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Samsung R&amp;D</h3>
+      <p class="meta">Computer vision on device</p>
+    </header>
+    <div class="prose">
+      <p>Transfer learning on EfficientNetB0 with deployment to edge hardware. Received an Excellence Award for the work.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Bosch</h3>
+      <p class="meta">Demand and inventory</p>
+    </header>
+    <div class="prose">
+      <p>A statistical demand modeling and inventory optimization pipeline. Worth being precise about: this was statistical modeling and pipeline work, with no ML model training involved.</p>
+    </div>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <h3>Earlier</h3>
+      <p class="meta">Purple Advisors, Dassault Systèmes</p>
+    </header>
+    <div class="prose">
+      <p>A KNN classifier and GPT-3.5 marketing automation with A/B testing at Purple Advisors, and computer vision for disease detection at Dassault Systèmes.</p>
+    </div>
+  </article>
+</section>
+
+<section id="teaching" class="section">
+  <h2 class="heading">Teaching</h2>
+  <div class="prose">
+    <p>Teaching assistant at Khoury College for CS 6140, Machine Learning, with Professor Elhamifar, and CS 6180, Foundations of Generative AI, with Professor Mina Ghashami.</p>
+    <p>Grading a few hundred assignments a term is the fastest way I have found to learn which explanations of backpropagation actually land and which ones only sound like they do.</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2 class="heading">Contact</h2>
+  <div class="prose">
+    <p>Open to applied ML, NLP, and data science roles starting mid 2026, and happy to talk about any of the work above.</p>
+  </div>
+  <ul class="contact-list">
+    <li><span class="contact-label">Email</span> <a href="mailto:you@example.com">you@example.com</a></li>
+    <li><span class="contact-label">GitHub</span> <a href="https://github.com/yourhandle">github.com/yourhandle</a></li>
+    <li><span class="contact-label">LinkedIn</span> <a href="https://linkedin.com/in/yourhandle">linkedin.com/in/yourhandle</a></li>
+    <li><span class="contact-label">Resume</span> <a href="resume.pdf">PDF</a></li>
+  </ul>
+</section>
+
+<footer class="foot">
+  <p>Boston, Massachusetts</p>
+</footer>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
