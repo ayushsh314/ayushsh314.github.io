@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ayush — applied machine learning</title>
+<title>Ayush Sharma — applied machine learning</title>
 <meta name="description" content="Applied ML and NLP engineer. MS in Artificial Intelligence at Northeastern University. Clinical NER, multi-agent systems, and production data pipelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,13 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="rail" aria-label="Sections">
-  <p class="rail-name">Ayush</p>
+  <p class="rail-name">Ayush Sharma</p>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#leadership">Leadership</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -29,20 +30,163 @@
 
 <section id="about" class="section">
   <h1 class="lede">
-    <span class="reveal">I build machine learning</span>
-    <span class="reveal">systems, then go looking</span>
-    <span class="reveal">for where they break.</span>
+    <span class="reveal">Researcher and Engineer.</span>
   </h1>
 
+  <ul class="stack skills reveal">
+    <li>Applied AI Research</li>
+    <li>NLP</li>
+    <li>Agentic AI</li>
+    <li>LLMs</li>
+    <li>Post Training</li>
+    <li>Data Science</li>
+    <li>Predictive Modeling</li>
+  </ul>
+
   <div class="prose reveal">
-    <p>I am finishing an MS in Artificial Intelligence at Northeastern University, graduating in August 2026. Before that I worked on applied ML at Johnson &amp; Johnson, Honeywell, Bosch, and Samsung R&amp;D.</p>
-    <p>Most of my work sits in the unglamorous middle of the stack: clinical entity extraction that has to survive real physician notes, agent pipelines that need to fail predictably, and the data engineering underneath both. I care a great deal about knowing what a benchmark number actually measured, which is why every project below says where its result stops holding.</p>
-    <p>Based in Boston. Currently looking for applied ML, NLP, and data science roles starting mid 2026.</p>
+    <p>I hold an MS in Artificial Intelligence from Northeastern University, completed in August 2026. Before that I worked on applied ML at Johnson &amp; Johnson, Honeywell, Bosch, and Samsung R&amp;D.</p>
+    <p>I build ML systems, agentic AI, NLP, and data science solutions, with experience spanning clinical NLP and model fine tuning, multi agent systems, retrieval augmented generation, and predictive modeling across six internships and several independent projects. I value validating and evaluating that a system works as much as building it in the first place, and I bring that same rigor to every problem I take on.</p>
+    <p>Based in the Bay Area. Currently looking for applied ML, NLP, and data science roles starting October 2026.</p>
   </div>
 </section>
 
 <section id="work" class="section">
   <h2 class="heading">Work</h2>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="J&amp;J"><img src="https://www.google.com/s2/favicons?domain=jnj.com&amp;sz=128" alt="" loading="lazy" width="30" height="30"></span>
+      <div class="entry-titles">
+        <h3>Johnson &amp; Johnson</h3>
+        <p class="role">Data Scientist Intern</p>
+        <p class="when">Boston, MA &middot; Jul 2025 &ndash; Dec 2025</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p class="team">Applied AI Research</p>
+      <p>Developed an NER framework to extract key information from medical records, normalize the identified entities, and establish relationships between them. Concurrently developed methods to measure cardiac output using time series data (hemodynamics).</p>
+      <p>Developed an LLM-orchestrated agentic pipeline to parse and classify documents, extract features, and impute missing values. Integrated a secondary LLM-as-a-judge to evaluate outputs and trigger corrective re-generation when inconsistencies were detected, reducing manual effort by 90%. Focused on Inference Optimization via targeted prompting strategies.</p>
+    </div>
+    <ul class="stack">
+      <li>GatorTron</li>
+      <li>LoRA</li>
+      <li>PyTorch</li>
+      <li>Hugging Face</li>
+      <li>LLM-as-a-Judge</li>
+      <li>Python</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="H"><img src="https://www.google.com/s2/favicons?domain=honeywell.com&amp;sz=128" alt="" loading="lazy" width="30" height="30"></span>
+      <div class="entry-titles">
+        <h3>Honeywell</h3>
+        <p class="role">Software Engineer Intern</p>
+        <p class="when">Bengaluru, KA, India &middot; Mar 2024 &ndash; Jul 2024</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p>Built a synthetic data generation pipeline that simulates warehouse shift operations within a digital twin environment, enabling teams to test and optimize workforce configurations without disrupting live operations.</p>
+      <p>Designed and patented an AI engine that solves the inverse problem — given a target performance goal, it automatically determines what workforce inputs and shift configurations would achieve that outcome. Delivered 15–20% gains in productivity and throughput, reduced simulation-to-decision turnaround from 24 hours to under 3 hours, and contributed to a U.S. Patent filing.</p>
+      <p>Also built an automated QA tool using computer vision to analyze warehouse layout images and generate configuration files for testing teams, replacing a manual process that previously took 6+ hours.</p>
+      <p>Additionally, led the recovery and restoration of malfunctioning Honeywell Cloud Connect (HCC) deployments, ensuring system stability across customer sites.</p>
+    </div>
+    <ul class="stack">
+      <li>Databricks</li>
+      <li>ETL</li>
+      <li>Predictive Modeling</li>
+      <li>Genetic Algorithms</li>
+      <li>Simulation</li>
+      <li>Python</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="PA"></span>
+      <div class="entry-titles">
+        <h3>Purple Advisors</h3>
+        <p class="role">Data Scientist Intern / Machine Learning Engineer Intern</p>
+        <p class="when">San Francisco, CA (Remote) &middot; Oct 2023 &ndash; Jan 2024</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p>Built a B2B lead classification system that identifies high-potential prospects by scraping and analyzing LinkedIn profile data, including industry, company size, and online activity. The model ranks leads by their likelihood to convert, achieving 84% accuracy, so sales teams know exactly who to reach out to first. Also fine-tuned an LLM to automatically generate personalized sales pitches tailored to each prospect's profile and social footprint, with a projected 30% boost in revenue.</p>
+    </div>
+    <ul class="stack">
+      <li>KNN</li>
+      <li>GPT-3.5</li>
+      <li>A/B Testing</li>
+      <li>Marketing Automation</li>
+      <li>Python</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="B"><img src="https://www.google.com/s2/favicons?domain=bosch.com&amp;sz=128" alt="" loading="lazy" width="30" height="30"></span>
+      <div class="entry-titles">
+        <h3>Bosch</h3>
+        <p class="role">Data Scientist Intern</p>
+        <p class="when">Bengaluru, KA, India &middot; Aug 2023 &ndash; Oct 2023</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p>Built an automated Python pipeline using Pandas and NumPy that pulls data from 8 different business systems, such as orders, customer records, service levels, shipping routes, and more, and combines them to generate optimized inventory recommendations across Bosch's distribution network. Replaced a 48-hour manual Excel process with a 1-hour automated run, saving 200+ hours annually while achieving 98%+ service reliability and 15% improvement in planning accuracy.</p>
+    </div>
+    <ul class="stack">
+      <li>Statistical Modeling</li>
+      <li>Demand Forecasting</li>
+      <li>Inventory Optimization</li>
+      <li>Python</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="S"><img src="https://www.google.com/s2/favicons?domain=samsung.com&amp;sz=128" alt="" loading="lazy" width="30" height="30"></span>
+      <div class="entry-titles">
+        <h3>Samsung Research and Development Institute India</h3>
+        <p class="role">AI/ML Researcher Intern</p>
+        <p class="when">Bengaluru, KA, India &middot; Mar 2023 &ndash; Aug 2023</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p>Built an AI system that recognizes pet emotions (happy, sad, anxious, relaxed) from photos and videos by analyzing facial expressions and body posture. Achieved 95% accuracy using a fine-tuned deep learning model.</p>
+      <p>The detected emotions were then replicated on a virtual pet avatar in a 3D environment (Unreal Engine), creating a real-time digital mirror of the pet's emotional state. Awarded Samsung's Excellence Award for the project.</p>
+    </div>
+    <ul class="stack">
+      <li>EfficientNetB0</li>
+      <li>Transfer Learning</li>
+      <li>Computer Vision</li>
+      <li>Edge Deployment</li>
+      <li>Python</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <header class="entry-head">
+      <span class="logo" data-monogram="3DS"><img src="https://www.google.com/s2/favicons?domain=3ds.com&amp;sz=128" alt="" loading="lazy" width="30" height="30"></span>
+      <div class="entry-titles">
+        <h3>Dassault Syst&egrave;mes</h3>
+        <p class="role">AI/ML Researcher Intern</p>
+        <p class="when">Bengaluru, KA, India &middot; Mar 2022 &ndash; Aug 2022</p>
+      </div>
+    </header>
+    <div class="prose">
+      <p>Built an AI-powered early warning system for shrimp farms that detects signs of disease from images before infections spread. The system uses computer vision to analyze shrimp images and flag potential health issues, integrated with a cloud-hosted dashboard that sends real-time alerts to farm owners — enabling faster intervention.</p>
+    </div>
+    <ul class="stack">
+      <li>Computer Vision</li>
+      <li>Deep Learning</li>
+      <li>Python</li>
+    </ul>
+  </article>
+</section>
+
+<section id="projects" class="section">
+  <h2 class="heading">Projects</h2>
 
   <article class="entry">
     <header class="entry-head">
@@ -52,10 +196,8 @@
     <div class="prose">
       <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
       <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
-      <p class="limit">That 98.7% is measured against ground-truth Mermaid source, not images. End to end from a raw image, accuracy is bounded by the vision reader's 0.860 edge F1. A self-check step on the examiner was a null result at −2.2, which I kept in the writeup as a boundary condition rather than dropping it.</p>
-      <p class="credit">Built with Purvaja Narayana and Shrijan Shetty. I owned measurement, the LLM stack, vision experiments, and results documentation.</p>
     </div>
-    <p class="links"><a href="#">Repository</a> <a href="#">Writeup</a></p>
+    <p class="links"><a href="https://github.com/PurvajaNarayan/FlowMind" target="_blank" rel="noopener noreferrer">Repository</a></p>
   </article>
 
   <article class="entry">
@@ -66,9 +208,7 @@
     <div class="prose">
       <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
       <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
-      <p class="limit">The judge reads the serialized milestones, not the source articles, so it scores internal consistency rather than factual grounding. The generator is Qwen2.5-3B-Instruct, small enough that reasoning quality is the binding constraint on output, not retrieval.</p>
     </div>
-    <p class="links"><a href="#">Repository</a></p>
   </article>
 
   <article class="entry">
@@ -79,10 +219,14 @@
     <div class="prose">
       <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
       <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
-      <p class="limit">Community summaries live in memory and are lost between runs. The corpus is titles and abstracts only, so the system reasons about what papers claim, not about what their methods sections say.</p>
     </div>
-    <p class="links"><a href="#">Repository</a></p>
+    <p class="links"><a href="https://github.com/ayushsh314/Graph-RAG---Research-Assistant" target="_blank" rel="noopener noreferrer">Repository</a></p>
   </article>
+
+</section>
+
+<section id="publications" class="section">
+  <h2 class="heading">Publications and Research</h2>
 
   <article class="entry">
     <header class="entry-head">
@@ -91,73 +235,55 @@
     </header>
     <div class="prose">
       <p>Work on PINNs for solving differential equations, focused on making training tractable on GPU rather than on new architectures.</p>
-      <p class="result">Reached a 28.2x speedup over the baseline implementation.</p>
-      <p class="limit">The speedup is an implementation and hardware result. It does not change solution accuracy or the class of equations the method handles.</p>
-      <p class="credit">Part of a body of undergraduate research that produced five IEEE publications.</p>
     </div>
+    <p class="links"><a href="https://drive.google.com/drive/folders/1lkVaDIYXS9EXVfLQNqov4ZE7mqrU8Bhk" target="_blank" rel="noopener noreferrer">Project files</a></p>
   </article>
+
+  <ol class="pubs">
+    <li class="pub">
+      <div class="pub-body">
+        <p class="pub-title"><a href="https://icwite-2026.ieeebangalore.org/accepted-papers/" target="_blank" rel="noopener noreferrer">Pet Emotion Recognition and Virtual Avatar Replication for Remote Interaction</a></p>
+        <p class="pub-venue">IEEE International Conference for Women in Innovation, Technology &amp; Entrepreneurship (ICWITE), Bengaluru &middot; 2026</p>
+      </div>
+      <span class="pub-status">Accepted</span>
+    </li>
+    <li class="pub">
+      <div class="pub-body">
+        <p class="pub-title"><a href="https://icwite-2026.ieeebangalore.org/accepted-papers/" target="_blank" rel="noopener noreferrer">Design and Development of a Real-Time Environmental Monitoring Device for Sericulture</a></p>
+        <p class="pub-venue">IEEE International Conference for Women in Innovation, Technology &amp; Entrepreneurship (ICWITE), Bengaluru &middot; 2026</p>
+      </div>
+      <span class="pub-status">Accepted</span>
+    </li>
+    <li class="pub">
+      <div class="pub-body">
+        <p class="pub-title"><a href="https://ieeexplore.ieee.org/document/11064565" target="_blank" rel="noopener noreferrer">Gender Segregation of Silkworm Pupae Using Transfer Learning</a></p>
+        <p class="pub-venue">3rd International Conference on Communication, Security, and Artificial Intelligence (ICCSAI) &middot; 2025</p>
+      </div>
+    </li>
+    <li class="pub">
+      <div class="pub-body">
+        <p class="pub-title"><a href="https://ieeexplore.ieee.org/document/10170071" target="_blank" rel="noopener noreferrer">Crime Scene Analysis for News Headline Generation</a></p>
+        <p class="pub-venue">4th International Conference for Emerging Technology (INCET) &middot; 2023</p>
+      </div>
+    </li>
+    <li class="pub">
+      <div class="pub-body">
+        <p class="pub-title"><a href="https://ieeexplore.ieee.org/document/10353424" target="_blank" rel="noopener noreferrer">Warehouse Automation using Line Follower Robot</a></p>
+        <p class="pub-venue">4th IEEE Global Conference for Advancement in Technology (GCAT) &middot; 2023</p>
+      </div>
+    </li>
+  </ol>
 </section>
 
-<section id="experience" class="section">
-  <h2 class="heading">Experience</h2>
-
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Johnson &amp; Johnson</h3>
-      <p class="meta">Clinical NLP</p>
-    </header>
-    <div class="prose">
-      <p>Clinical named entity recognition on GatorTron with LoRA fine-tuning, reaching F1 above 0.9. Built the surrounding agentic workflow by hand rather than on a framework, and used LLM-as-a-judge for validation.</p>
-    </div>
-  </article>
-
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Honeywell</h3>
-      <p class="meta">Simulation and optimization</p>
-    </header>
-    <div class="prose">
-      <p>Built a full stack around an existing simulator: ETL out of Databricks, predictive models on top, and a genetic algorithm framework driving a closed evaluation loop. The work led to a filed US patent and won an internal hackathon.</p>
-    </div>
-  </article>
-
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Samsung R&amp;D</h3>
-      <p class="meta">Computer vision on device</p>
-    </header>
-    <div class="prose">
-      <p>Transfer learning on EfficientNetB0 with deployment to edge hardware. Received an Excellence Award for the work.</p>
-    </div>
-  </article>
-
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Bosch</h3>
-      <p class="meta">Demand and inventory</p>
-    </header>
-    <div class="prose">
-      <p>A statistical demand modeling and inventory optimization pipeline. Worth being precise about: this was statistical modeling and pipeline work, with no ML model training involved.</p>
-    </div>
-  </article>
-
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Earlier</h3>
-      <p class="meta">Purple Advisors, Dassault Systèmes</p>
-    </header>
-    <div class="prose">
-      <p>A KNN classifier and GPT-3.5 marketing automation with A/B testing at Purple Advisors, and computer vision for disease detection at Dassault Systèmes.</p>
-    </div>
-  </article>
-</section>
-
-<section id="teaching" class="section">
-  <h2 class="heading">Teaching</h2>
-  <div class="prose">
-    <p>Teaching assistant at Khoury College for CS 6140, Machine Learning, with Professor Elhamifar, and CS 6180, Foundations of Generative AI, with Professor Mina Ghashami.</p>
-    <p>Grading a few hundred assignments a term is the fastest way I have found to learn which explanations of backpropagation actually land and which ones only sound like they do.</p>
-  </div>
+<section id="leadership" class="section">
+  <h2 class="heading">Leadership</h2>
+  <ul class="list">
+    <li>Teaching Assistant &mdash; CS 6180, Foundations of Generative AI, with Professor Mina Ghashami. 40 students, Summer 2026.</li>
+    <li>Teaching Assistant &mdash; CS 6140, Machine Learning, with Professor Ehsan Elhamifar. 80 students, Spring 2026.</li>
+    <li>Tech Head &mdash; Gradient AI Student Club.</li>
+    <li>Core Committee Member &mdash; Google Developer Student Clubs (GDSC).</li>
+    <li>Computational Intelligence Lead &mdash; BMSCE Robotics.</li>
+  </ul>
 </section>
 
 <section id="contact" class="section">
@@ -165,16 +291,17 @@
   <div class="prose">
     <p>Open to applied ML, NLP, and data science roles starting mid 2026, and happy to talk about any of the work above.</p>
   </div>
-  <ul class="contact-list">
-    <li><span class="contact-label">Email</span> <a href="mailto:you@example.com">you@example.com</a></li>
-    <li><span class="contact-label">GitHub</span> <a href="https://github.com/yourhandle">github.com/yourhandle</a></li>
-    <li><span class="contact-label">LinkedIn</span> <a href="https://linkedin.com/in/yourhandle">linkedin.com/in/yourhandle</a></li>
-    <li><span class="contact-label">Resume</span> <a href="resume.pdf">PDF</a></li>
-  </ul>
+<ul class="contact-list">
+  <li><span class="contact-label">Email</span> <a href="mailto:asharm.work@gmail.com">asharm.work@gmail.com</a></li>
+  <li><span class="contact-label">GitHub</span> <a href="https://github.com/ayushsh314" target="_blank" rel="noopener noreferrer">github.com/ayushsh314</a></li>
+  <li><span class="contact-label">LinkedIn</span> <a href="https://www.linkedin.com/in/ayush-sharma-2666a1196" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayush-sharma-2666a1196</a></li>
+  <li><span class="contact-label">Google Scholar</span> <a href="https://scholar.google.com/citations?hl=en&amp;user=P1mDArQAAAAJ" target="_blank" rel="noopener noreferrer">scholar.google.com/citations</a></li>
+  <li><span class="contact-label">Resume</span> <a href="resume.pdf" target="_blank" rel="noopener noreferrer">PDF</a></li>
+</ul>
 </section>
 
 <footer class="foot">
-  <p>Boston, Massachusetts</p>
+  <p>San Francisco, CA, USA</p>
 </footer>
 
 </main>

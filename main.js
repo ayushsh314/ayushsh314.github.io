@@ -14,3 +14,14 @@ const observer = new IntersectionObserver(entries => {
 }, { rootMargin: "-20% 0px -70% 0px" });
 
 sections.forEach(section => observer.observe(section));
+
+// Logos are hotlinked, so fall back to a monogram if one fails to load.
+document.querySelectorAll(".logo").forEach(slot => {
+  const img = slot.querySelector("img");
+  if (!img) {
+    slot.classList.add("fallback");
+    return;
+  }
+  img.addEventListener("error", () => slot.classList.add("fallback"));
+  if (img.complete && img.naturalWidth === 0) slot.classList.add("fallback");
+});
