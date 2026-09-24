@@ -175,6 +175,24 @@ body {
 
 .entry-head { margin-bottom: 1.1rem; }
 
+/* Projects sit side by side, widening past the text column when there is room */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.25rem;
+  width: min(1080px, calc(100vw - var(--rail) - 8rem));
+  font-size: 17px;
+}
+
+.project-grid .entry {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+.project-grid .entry-head h3 { font-size: 22px; }
+
 /* Work entries carry a logo, title, and place/date line */
 
 #work .entry-head {
@@ -450,6 +468,19 @@ a:focus-visible {
   }
 
   .section { padding-top: 4rem; }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    width: auto;
+    font-size: inherit;
+  }
+
+  .project-grid .entry {
+    padding-bottom: 2.75rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project-grid .entry:last-child { border-bottom: none; }
   #about { padding-top: 3.5rem; }
   .lede { max-width: none; }
   .lede span { display: inline; }

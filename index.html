@@ -191,40 +191,39 @@
 <section id="projects" class="section">
   <h2 class="heading">Projects</h2>
 
-  <article class="entry">
-    <header class="entry-head">
-      <h3>FlowMind</h3>
-      <p class="meta">Multi-agent flowchart understanding</p>
-    </header>
-    <div class="prose">
-      <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
-      <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
-    </div>
-    <p class="links"><a href="https://github.com/PurvajaNarayan/FlowMind" target="_blank" rel="noopener noreferrer">Repository</a></p>
-  </article>
+  <div class="project-grid">
+    <article class="entry">
+      <header class="entry-head">
+        <h3>FlowMind</h3>
+      </header>
+      <div class="prose">
+        <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
+        <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
+      </div>
+      <p class="links"><a href="https://github.com/PurvajaNarayan/FlowMind" target="_blank" rel="noopener noreferrer">Repository</a></p>
+    </article>
 
-  <article class="entry">
-    <header class="entry-head">
-      <h3>MarketSensAI</h3>
-      <p class="meta">Multi-agent financial analysis, MS capstone</p>
-    </header>
-    <div class="prose">
-      <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
-      <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
-    </div>
-  </article>
+    <article class="entry">
+      <header class="entry-head">
+        <h3>MarketSensAI</h3>
+      </header>
+      <div class="prose">
+        <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
+        <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
+      </div>
+    </article>
 
-  <article class="entry">
-    <header class="entry-head">
-      <h3>Research Buddy</h3>
-      <p class="meta">Graph-based literature assistant</p>
-    </header>
-    <div class="prose">
-      <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
-      <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
-    </div>
-    <p class="links"><a href="https://github.com/ayushsh314/Graph-RAG---Research-Assistant" target="_blank" rel="noopener noreferrer">Repository</a></p>
-  </article>
+    <article class="entry">
+      <header class="entry-head">
+        <h3>Research Buddy</h3>
+      </header>
+      <div class="prose">
+        <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
+        <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
+      </div>
+      <p class="links"><a href="https://github.com/ayushsh314/Graph-RAG---Research-Assistant" target="_blank" rel="noopener noreferrer">Repository</a></p>
+    </article>
+  </div>
 
 </section>
 
