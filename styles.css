@@ -479,11 +479,8 @@ a:focus-visible {
 .prose,
 .list { margin-inline: auto; }
 
-.section:not(#projects) .prose p {
-  text-align: center;
-  -webkit-hyphens: manual;
-  hyphens: manual;
-}
+/* Justified, with the short last line centered under the block */
+.section:not(#projects) .prose p { text-align-last: center; }
 
 .section:not(#projects) .stack { justify-content: center; }
 
