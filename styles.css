@@ -7,7 +7,7 @@
   --ochre: #b89b62;
   --serif: "Newsreader", Georgia, serif;
   --sans: "Archivo", system-ui, sans-serif;
-  --measure: 62ch;
+  --measure: 90ch;
   --rail: 200px;
 }
 
@@ -86,14 +86,14 @@ body {
 /* Layout */
 
 #main {
-  --wide: min(1080px, calc(100vw - var(--rail) - 8rem));
+  --wide: min(1240px, calc(100vw - var(--rail) - 6rem));
   margin-left: var(--rail);
   padding: 0 2rem 8rem;
 }
 
 /* One centered column beside the rail */
 #main > * {
-  max-width: 720px;
+  max-width: 1040px;
   margin-inline: auto;
 }
 
@@ -219,7 +219,7 @@ body {
 .demo:hover { border-color: var(--ochre); }
 
 /* Work entries get a smaller clip under the role line */
-.demo.small { max-width: 420px; }
+.demo.small { max-width: 560px; }
 
 .demo:focus-visible {
   outline: 2px solid var(--ochre);
