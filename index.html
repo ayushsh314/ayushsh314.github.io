@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ayush Sharma</title>
 <meta name="description" content="Applied ML and NLP engineer. MS in Artificial Intelligence at Northeastern University. Clinical NER, multi-agent systems, and production data pipelines.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ayushsh314.github.io/">
+<meta property="og:title" content="Ayush Sharma">
+<meta property="og:description" content="Applied ML and NLP engineer. MS in Artificial Intelligence at Northeastern University. Clinical NER, multi-agent systems, and production data pipelines.">
+<meta property="og:image" content="https://ayushsh314.github.io/Logo.png">
+<meta property="og:image:width" content="836">
+<meta property="og:image:height" content="772">
+<meta name="twitter:card" content="summary">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="favicon.png" sizes="512x512" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -200,6 +208,12 @@
         <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
         <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
       </div>
+      <ul class="stack">
+        <li>Python</li>
+        <li>TF-IDF</li>
+        <li>Qwen3-VL-2B</li>
+        <li>Graph traversal</li>
+      </ul>
       <p class="links"><a href="https://github.com/PurvajaNarayan/FlowMind" target="_blank" rel="noopener noreferrer">Repository</a></p>
     </article>
 
@@ -211,6 +225,12 @@
         <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
         <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
       </div>
+      <ul class="stack">
+        <li>LangGraph</li>
+        <li>FAISS</li>
+        <li>MiniLM-L6-v2</li>
+        <li>LLM-as-judge</li>
+      </ul>
       <p class="links"><a href="https://github.com/ayushsh314/marketsensai" target="_blank" rel="noopener noreferrer">Repository</a></p>
     </article>
 
@@ -222,6 +242,12 @@
         <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
         <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
       </div>
+      <ul class="stack">
+        <li>LlamaIndex</li>
+        <li>Neo4j</li>
+        <li>graspologic</li>
+        <li>Ollama</li>
+      </ul>
       <p class="links"><a href="https://github.com/ayushsh314/Graph-RAG---Research-Assistant" target="_blank" rel="noopener noreferrer">Repository</a></p>
     </article>
   </div>
