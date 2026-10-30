@@ -211,6 +211,9 @@ body {
 
 .demo:hover { border-color: var(--ochre); }
 
+/* Work entries get a smaller clip under the role line */
+.demo.small { max-width: 420px; }
+
 .demo:focus-visible {
   outline: 2px solid var(--ochre);
   outline-offset: 3px;
