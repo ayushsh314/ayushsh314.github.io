@@ -193,6 +193,54 @@ body {
 
 .project-grid .entry-head h3 { font-size: 22px; }
 
+/* Project demos: muted loops; a click turns the sound on */
+
+.demo {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 9px;
+  overflow: hidden;
+  background: var(--raised);
+  cursor: pointer;
+  transition: border-color 160ms ease;
+}
+
+.demo:hover { border-color: var(--ochre); }
+
+.demo:focus-visible {
+  outline: 2px solid var(--ochre);
+  outline-offset: 3px;
+}
+
+.demo video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.demo::after {
+  content: "Sound off";
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.6rem;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: rgba(25, 27, 25, 0.8);
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+}
+
+.demo.sound::after { content: "Sound on"; color: var(--ochre); }
+.demo.paused::after { content: "Play"; }
+
 /* Work entries carry a logo, title, and place/date line */
 
 #work .entry-head {

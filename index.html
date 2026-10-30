@@ -204,6 +204,9 @@
       <header class="entry-head">
         <h3>FlowMind</h3>
       </header>
+      <button class="demo" type="button" aria-label="Play FlowMind demo with sound">
+        <video src="media/flowmind.mp4" poster="media/flowmind.jpg" muted loop playsinline preload="metadata" aria-label="FlowMind routing flowchart questions to a graph tool or an LLM examiner"></video>
+      </button>
       <div class="prose">
         <p>A system that answers questions about flowcharts by routing each question to the tool that can actually answer it. A TF-IDF router sends structural questions to a deterministic graph traversal and language questions to an LLM examiner, with a Qwen3-VL-2B vision reader recovering graph structure from images.</p>
         <p class="result">The router hits roughly 99.5% accuracy, and structural question answering reaches 98.7%.</p>
@@ -221,6 +224,9 @@
       <header class="entry-head">
         <h3>MarketSensAI</h3>
       </header>
+      <button class="demo" type="button" aria-label="Play MarketSensAI demo with sound">
+        <video src="media/marketsensai.mp4" poster="media/marketsensai.jpg" muted loop playsinline preload="metadata" aria-label="MarketSensAI explaining a stock price move from the news"></video>
+      </button>
       <div class="prose">
         <p>Four agents arranged as a linear LangGraph state machine, moving a company from raw filings and news through to a structured analysis. A FAISS index over MiniLM-L6-v2 embeddings handles follow-up questions against the same corpus.</p>
         <p class="result">Evaluated four ways, including an LLM-as-judge pass over the serialized milestone JSON each agent emits.</p>
@@ -238,6 +244,9 @@
       <header class="entry-head">
         <h3>Research Buddy</h3>
       </header>
+      <button class="demo" type="button" aria-label="Play Research Buddy demo with sound">
+        <video src="media/researchbuddy.mp4" poster="media/researchbuddy.jpg" muted loop playsinline preload="metadata" aria-label="Research Buddy building a knowledge graph from papers and answering across them"></video>
+      </button>
       <div class="prose">
         <p>A research assistant built on LlamaIndex PropertyGraphIndex, using Neo4j purely as a property graph store. Hierarchical Leiden clustering via graspologic groups the extracted entities into communities, each summarized to support questions that span many papers rather than sitting inside one.</p>
         <p class="result">Runs fully local on GIST-all-MiniLM-L6-v2 embeddings and Qwen2.5 through Ollama.</p>
