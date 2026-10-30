@@ -86,9 +86,15 @@ body {
 /* Layout */
 
 #main {
-  margin-left: calc(var(--rail) + 4rem);
-  max-width: 720px;
+  --wide: min(1080px, calc(100vw - var(--rail) - 8rem));
+  margin-left: var(--rail);
   padding: 0 2rem 8rem;
+}
+
+/* One centered column beside the rail */
+#main > * {
+  max-width: 720px;
+  margin-inline: auto;
 }
 
 .section {
@@ -181,7 +187,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2.25rem;
-  width: min(1080px, calc(100vw - var(--rail) - 8rem));
+  width: var(--wide);
+  margin-left: calc((100% - var(--wide)) / 2);
   font-size: 17px;
 }
 
@@ -461,6 +468,57 @@ a:focus-visible {
   color: var(--dim);
 }
 
+/* Everything except the project cards reads centered */
+
+.section,
+.foot { text-align: center; }
+
+.project-grid { text-align: left; }
+
+.lede,
+.prose,
+.list { margin-inline: auto; }
+
+.section:not(#projects) .prose p {
+  text-align: center;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+.section:not(#projects) .stack { justify-content: center; }
+
+#work .entry-head {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+#work .logo { margin-top: 0; }
+
+.demo.small { margin-inline: auto; }
+
+.list li { padding-left: 0; }
+
+.list li::before {
+  position: static;
+  display: inline-block;
+  margin-right: 0.6rem;
+  vertical-align: 0.2em;
+}
+
+.pub {
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pub-status { margin-top: 0; }
+
+.contact-label {
+  width: auto;
+  margin-right: 0.75rem;
+}
+
 /* Page load */
 
 .reveal {
@@ -518,11 +576,14 @@ a:focus-visible {
     padding: 0 1.5rem 5rem;
   }
 
+  #main > * { max-width: none; }
+
   .section { padding-top: 4rem; }
 
   .project-grid {
     grid-template-columns: 1fr;
     width: auto;
+    margin-left: 0;
     font-size: inherit;
   }
 
